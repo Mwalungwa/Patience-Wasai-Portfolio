@@ -1,0 +1,155 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+
+
+{% block title %}Patience Wasai{% endblock %}
+
+{% block content %}
+	<body class="is-preload">
+       		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section class="intro">
+						<header>
+							<h1>Patience Wasai</h1>
+							<p>CLINICAL PSYCHOLOGIST </p>
+							<ul class="actions">
+								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
+							</ul>
+						</header>
+						<div class="content">
+							<span class="image fill" data-position="center"><img src="/static/images/Patience_Image.jpeg" alt="" /></span>
+						</div>
+
+					</section>
+
+				<!-- Section -->
+					<section id="first">
+						<header>
+							<h2>ABOUT ME</h2>
+						</header>
+						<div class="content">
+                            <p>Hi, I am <strong>Patience Wasai</strong> , a <strong>dedicated Clinical Psychologist</strong>  with a unique
+                            fusion of skills, blending a strong foundation in Human Resources with a deep passion for
+                            serving humanity. In addition to this I am an engaged and proactive member of the Kenya
+                            Counseling and Psychological Association </p>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section>
+						<header>
+							<h2>My Work</h2>
+						</header>
+						<div class="content">
+							<p><strong></strong> I currently serve as a Clinical Psychologist at the National Health Insurance Fund (NHIF), where my daily work has been instrumental in raising mental health awareness among the clients I support.</p>
+							<p> Beyond my professional endeavors, I am a devoted Christian and an active member of CITAM churches. I dedicate my time to mentoring young adults and actively engaging in counseling and advocacy within the faith community. I have also been a prominent figure in various training sessions and discussions, including my involvement in a Red Cross program focused on combating drug and substance abuse.</p>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section>
+						<header>
+							<h2>My Mission</h2>
+						</header>
+						<div class="content">
+                            <p>I strive to harness the strengths of my diverse background to empower individuals and organizations alike, facilitating positive change and personal growth. Whether you are seeking personal counseling or looking to enhance your team's performance, I am here to guide you on your journey towards a brighter, more fulfilling future.</p>
+                            <p>.</p>
+
+							<!-- Section -->
+								<section>
+									<header>
+										<h3>Let's move together</h3>
+										<p>Welcome to a world of transformation, where the power of psychology meets the wisdom of human resources, and where I, Patience Wasai, am your dedicated guide.</p>
+									</header>
+									<div class="content">
+										<div class="gallery">
+											 <a href="" class="landscape" ><img src="/static/images/Patience_Image2.png" alt="" /></a>
+										</div>
+									</div>
+								</section>
+						</div>
+					</section>
+
+
+				<!-- Section -->
+					<section>
+						<header>
+							<h2>Get in touch</h2>
+						</header>
+
+
+						<div class="content">
+							<p>Embark on a journey of self-discovery and growth. Your well-being matters, and I'm here to support you. Reach out, and let's navigate this transformative journey together. </p>
+							<form method="post">
+								<div class="fields">
+									<div class="field half">
+										<input type="text" name="name" id="name" placeholder="Name" />
+									</div>
+									<div class="field half">
+										<input type="email" name="email" id="email" placeholder="Email" />
+									</div>
+									<div class="field">
+										<textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" class="button primary" /></li>
+								</ul>
+							</form>
+							{%  for message in get_flashed_messages() %}
+							    <div class="alert alert-success" role="alert">
+                                    {{ message }}
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            {% endfor %}
+						</div>
+
+						<footer>
+							<ul class="items">
+								<li>
+									<h3>Email</h3>
+									<a href="#">payshu.wasai@gmail.com</a>
+								</li>
+								<li>
+									<h3>Phone</h3>
+									<a href="#">(000) 000-0000</a>
+								</li>
+								<li>
+									<h3>Address</h3>
+									<span>Somewhere in Nairobi</span>
+								</li>
+								<li>
+									<h3>Elsewhere</h3>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.instagram.com/wasaipayshu/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://www.linkedin.com/in/patience-wasai-96205476/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+									</ul>
+								</li>
+							</ul>
+						</footer>
+					</section>
+
+				<!-- Copyright -->
+					<div class="copyright">&copy; 2023. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/static/js/jquery.min.js"></script>
+			<script src="/static/js/jquery.scrolly.min.js"></script>
+			<script src="/static/js/browser.min.js"></script>
+			<script src="/static/js/breakpoints.min.js"></script>
+			<script src="/static/js/util.js"></script>
+			<script src="/static/js/main.js"></script>
+
+{% endblock %}
