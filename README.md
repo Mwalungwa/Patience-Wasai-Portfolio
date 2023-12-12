@@ -1,2 +1,2 @@
 # Patience-Wasai-Portfolio
-This is a prefessional portfolio for Patience Wasai
+This is a professional portfolio for Patience Wasai
