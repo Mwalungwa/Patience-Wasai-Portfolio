@@ -2,7 +2,10 @@
 
 {% block styles %}
     {{ super() }}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="https://kit.fontawesome.com/dc4473b3aa.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 {% endblock %}
 
 
@@ -14,133 +17,306 @@
 			<div id="wrapper">
 
 				<!-- Intro -->
-					<section class="intro">
-						<header>
-							<h1>Patience Wasai</h1>
-							<p>CLINICAL PSYCHOLOGIST </p>
-							<ul class="actions">
-								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
-							</ul>
-						</header>
-						<div class="content">
-							<span class="image fill" data-position="center"><img src="/static/images/Patience_Image.jpeg" alt="" /></span>
-						</div>
+                <section class="intro">
+                    <header>
+                        <h1>Patience Wasai</h1>
+                        <p>CLINICAL PSYCHOLOGIST </p>
+                        <ul class="actions">
+                            <li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
+                        </ul>
+                    </header>
+                    <div class="content">
+                        <span class="image fill" data-position="center"><img src="/static/images/Patience_Image.jpeg" alt="" /></span>
+                    </div>
 
-					</section>
+                </section>
 
-				<!-- Section -->
-					<section id="first">
-						<header>
-							<h2>ABOUT ME</h2>
-						</header>
-						<div class="content">
-                            <p>Hi, I am <strong>Patience Wasai</strong> , a <strong>dedicated Clinical Psychologist</strong>  with a unique
-                            fusion of skills, blending a strong foundation in Human Resources with a deep passion for
-                            serving humanity. In addition to this I am an engaged and proactive member of the Kenya
-                            Counseling and Psychological Association </p>
-						</div>
-					</section>
+				<!-- Section-About Me -->
+                <section id="first">
+                    <header>
+                        <h2>ABOUT ME</h2>
+                    </header>
+                    <div class="content">
+                        <p>Hi, I am <strong>Patience Wasai</strong> , a <strong>dedicated Clinical Psychologist</strong>  with a unique
+                        fusion of skills, blending a strong foundation in Human Resources with a deep passion for
+                        serving humanity. In addition to this I am an engaged and proactive member of the Kenya
+                        Counseling and Psychological Association </p>
+                    </div>
+                </section>
 
-				<!-- Section -->
-					<section>
-						<header>
-							<h2>My Work</h2>
-						</header>
-						<div class="content">
-							<p><strong></strong> I currently serve as a Clinical Psychologist at the National Health Insurance Fund (NHIF), where my daily work has been instrumental in raising mental health awareness among the clients I support.</p>
-							<p> Beyond my professional endeavors, I am a devoted Christian and an active member of CITAM churches. I dedicate my time to mentoring young adults and actively engaging in counseling and advocacy within the faith community. I have also been a prominent figure in various training sessions and discussions, including my involvement in a Red Cross program focused on combating drug and substance abuse.</p>
-						</div>
-					</section>
+				<!-- Section-My work -->
+                <section>
+                    <header>
+                        <h2>My Work</h2>
+                    </header>
+                    <div class="content">
+                        <p> I currently serve as a Clinical Psychologist at the National Health Insurance Fund (NHIF), where my daily work has been instrumental in raising mental health awareness among the clients I support.</p>
+                        <p> Beyond my professional endeavors, I am a devoted Christian and an active member of CITAM churches. I dedicate my time to mentoring young adults and actively engaging in counseling and advocacy within the faith community. I have also been a prominent figure in various training sessions and discussions, including my involvement in a Red Cross program focused on combating drug and substance abuse.</p>
+                    </div>
+                </section>
 
-				<!-- Section -->
-					<section>
-						<header>
-							<h2>My Mission</h2>
-						</header>
-						<div class="content">
-                            <p>I strive to harness the strengths of my diverse background to empower individuals and organizations alike, facilitating positive change and personal growth. Whether you are seeking personal counseling or looking to enhance your team's performance, I am here to guide you on your journey towards a brighter, more fulfilling future.</p>
-                            <p>.</p>
-
-							<!-- Section -->
-								<section>
-									<header>
-										<h3>Let's move together</h3>
-										<p>Welcome to a world of transformation, where the power of psychology meets the wisdom of human resources, and where I, Patience Wasai, am your dedicated guide.</p>
-									</header>
-									<div class="content">
-										<div class="gallery">
-											 <a href="" class="landscape" ><img src="/static/images/Patience_Image2.png" alt="" /></a>
-										</div>
-									</div>
-								</section>
-						</div>
-					</section>
-
-
-				<!-- Section -->
-					<section>
-						<header>
-							<h2>Get in touch</h2>
-						</header>
-
-
-						<div class="content">
-							<p>Embark on a journey of self-discovery and growth. Your well-being matters, and I'm here to support you. Reach out, and let's navigate this transformative journey together. </p>
-							<form method="post">
-								<div class="fields">
-									<div class="field half">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="field half">
-										<input type="email" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="field">
-										<textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" class="button primary" /></li>
-								</ul>
-							</form>
-							{%  for message in get_flashed_messages() %}
-							    <div class="alert alert-success" role="alert">
-                                    {{ message }}
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+            	<!-- Section-Competencies -->
+                <section>
+                    <header>
+                        <h2>Competencies</h2>
+                    </header>
+                    <div class="content">
+                        <div class="container">
+                            <div id="carouselExampleIndicators" class="carousel slide carousel-dark">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 </div>
-                            {% endfor %}
-						</div>
+                                <div class="carousel-inner" style="align-items: center">
+                                    <div class="carousel-item active">
+                                       <p>In my role as a clinical psychologist, I am extensively involved in the assessment process,
+                                            contributing to the formulation of diagnoses and providing psychological evaluations.
+                                            This foundational step guides personalized treatment plans. Additionally, I administer a
+                                            diverse range of psychological tests in hospital settings to measure disorders such as depression,
+                                            anxiety, childhood learning disorders, and emotional issues.</p>
+                                    </div>
+                                    <div class="carousel-item">
+                                         <p>Moving beyond assessment, I play a pivotal role in the treatment process. This involves
+                                            providing psychotherapy, discussing patient progress with healthcare providers or family
+                                            members, teaching coping skills, and educating individuals and families about specific
+                                            mental health disorders. Furthermore, I engage in consultancy, collaborating with fellow
+                                            professionals to share insights into psychological treatments and advocating for specific
+                                            interventions when appropriate.</p>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <p> My commitment extends to teaching and training, participating in hospital-based practicums
+                                            and academic activities like Continuous Medical Education (CMEs). In a research-oriented
+                                            practicum, I actively contribute to clinical research under supervision, advancing our
+                                            understanding of psychological processes. Lastly, I am deeply involved in community outreach,
+                                            conducting psychotherapy in outreach programs, educating and training community members
+                                            on mental health, and participating in initiatives like home visits and repatriation efforts.
+                                            This comprehensive approach reflects the diverse competencies inherent in my role as a clinical
+                                            psychologist.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"
+                            style="top:50%; width:5%; margin:10px; background-color:#2ee4bb">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next"
+                            style="top:50%; width:5%; margin:10px; background-color: #2ee4bb;">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </section>
 
-						<footer>
-							<ul class="items">
-								<li>
-									<h3>Email</h3>
-									<a href="#">payshu.wasai@gmail.com</a>
-								</li>
-								<li>
-									<h3>Phone</h3>
-									<a href="#">(000) 000-0000</a>
-								</li>
-								<li>
-									<h3>Address</h3>
-									<span>Somewhere in Nairobi</span>
-								</li>
-								<li>
-									<h3>Elsewhere</h3>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="https://www.instagram.com/wasaipayshu/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="https://www.linkedin.com/in/patience-wasai-96205476/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-									</ul>
-								</li>
-							</ul>
-						</footer>
-					</section>
+
+                <!-- Section-Certifications -->
+                <section>
+                    <header>
+                        <h2>Certifications</h2>
+                    </header>
+                    <div class="content">
+                        <p>My certifications aren't just letters on a page, they're my dedication to creating a safe space where you can be heard, understood and empowered to reclaim your well-being.</p>
+                        <ul class="feature-icons">
+                            <li class="icon solid fa-award">Kenya Counselling and Psychological Association Associate Counsellor/Psychologist</li>
+                            <li class="icon solid fa-certificate"></i> WHO Quality Rights E-Training on Mental Health, Recovery and Community Inclusion </li>
+                            <li class="icon solid fa-graduation-cap">Masters in Clinical Psychology</li>
+{#                            <li class="icon solid fa-book-open">Blandit condimentum</li>#}
+{#                            <li class="icon solid fa-book-open-reader">Lorem ipsum dolor</li>#}
+{#                            <li class="icon solid fa-certificate">Nibh amet venenatis</li>#}
+                        </ul>
+                        <p>Certified to listen, understand and empower</p>
+                    </div>
+                </section>
+
+
+				<!-- Section-My mission -->
+                <section>
+                    <header>
+                        <h2>My Mission</h2>
+                    </header>
+                    <div class="content">
+                        <p>I strive to harness the strengths of my diverse background to empower individuals and organizations alike, facilitating positive change and personal growth. Whether you are seeking personal counseling or looking to enhance your team's performance, I am here to guide you on your journey towards a brighter, more fulfilling future.</p>
+                        <p>.</p>
+
+                        <!-- Section -->
+                            <section>
+                                <header>
+                                    <h3>Embrace transformation</h3>
+                                    <p>Welcome to a world of transformation, where the power of psychology meets the wisdom of human resources, and where I, Patience Wasai, am your dedicated guide.</p>
+                                </header>
+                                <div class="content">
+                                    <div class="gallery">
+                                         <a href="" class="landscape" ><img src="/static/images/Patience_Image2.png" alt="" /></a>
+                                    </div>
+                                </div>
+                            </section>
+                    </div>
+                </section>
+
+                <!-- Section-Other link -->
+                <section>
+                    <header>
+                        <h2>Let's get started</h2>
+                    </header>
+                    <div class="content">
+                        <p>Take the first step towards building a brighter future. Explore my personalized rates and book your session today. Together, we can unlock the positive change you crave.</p>
+                        <ul class="actions">
+                            <li><a href="#" class="button primary large" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">View rates</a></li>
+                            <li><a href="#get-in-touch" class="scrolly button large">Book a session</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                 <!-- Scrollable modal -->
+                    <div class="modal bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header" style="background-color: #2ee4bb">
+                                    <h2 class="modal-title" id="exampleModalLongTitle">Therapy sessions ratings</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col" >
+                                                <table class="table table-striped border-bottom" >
+                                                    <tbody>
+                                                        <h3 style="margin-bottom: 10px; justify-content: center; display: flex">Individual Therapy</h3>
+                                                        <tr>
+                                                            <td>Individual</td>
+                                                            <td>3,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Teenagers & Children</td>
+                                                            <td>3,500</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col">
+                                                <table class="table table-striped border-left border-bottom">
+                                                    <tbody>
+                                                    <h3 style="margin-bottom: 10px; justify-content: center; display: flex "  class="rounded"> Group therapy</h3>
+                                                        <tr>
+                                                            <td>2 to 5 members</td>
+                                                            <td>5,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Additional Members</td>
+                                                            <td>1,000 per person</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <table class="table table-striped">
+                                                    <tbody>
+                                                        <h3 style="margin-bottom: 10px; justify-content: center; display: flex"> Marriage & Family Therapy</h3>
+                                                        <tr>
+                                                            <td>Couple/Premarital (pair)</td>
+                                                            <td>4,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Couples/Premarital (2 pairs & above)</td>
+                                                            <td>3,000 per pair</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col">
+                                                <table class="table table-striped">
+                                                    <tbody>
+                                                        <h3 style="margin-bottom: 10px; justify-content: center; display: flex">Corporate/Large group</h3>
+                                                        <tr>
+                                                            <td>21 & above </td>
+                                                            <td>800 per person</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Corporate Talks/ Psycho Education</td>
+                                                            <td>10,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <p> Rates are in Kenyan Shillings and charged per session(1hr)</p>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+				<!-- Section-Get in Touch -->
+                <section id="get-in-touch">
+                    <header>
+                        <h2>Get in touch</h2>
+                    </header>
+
+
+                    <div class="content">
+                        <p>Embark on a journey of self-discovery and growth. Your well-being matters, and I'm here to support you. Reach out, and let's navigate this transformative journey together. </p>
+                        <form method="post">
+                            <div class="fields">
+                                <div class="field half">
+                                    <input type="text" name="name" id="name" placeholder="Name" />
+                                </div>
+                                <div class="field half">
+                                    <input type="email" name="email" id="email" placeholder="Email" />
+                                </div>
+                                <div class="field">
+                                    <textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
+                                </div>
+                            </div>
+                            <ul class="actions">
+                                <li><input type="submit" value="Send Message" class="button primary" /></li>
+                            </ul>
+                        </form>
+                        {%  for message in get_flashed_messages() %}
+                            <div class="alert alert-success" role="alert">
+                                {{ message }}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                    <footer>
+                        <ul class="items">
+                            <li>
+                                <h3>Email</h3>
+                                <a href="#">consultancy@patiencewasai.com</a>
+                            </li>
+                            <li>
+                                <h3>Phone</h3>
+                                <p> (254)103126330 </p>
+                            </li>
+                            <li>
+                                <h3>Address</h3>
+                                <span>Nairobi</span>
+                            </li>
+                            <li>
+                                <h3>Elsewhere</h3>
+                                <ul class="icons">
+                                    <li><a href="https://twitter.com/patience_wasai" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                    <li><a href="https://web.facebook.com/patience.wasai.9" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                    <li><a href="https://www.instagram.com/patience_wasai/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                    <li><a href="https://www.linkedin.com/in/patience-wasai-96205476/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </footer>
+                </section>
 
 				<!-- Copyright -->
-					<div class="copyright"> Copyright © {{ current_year }} Patience Wasai.</div>
+                <div class="copyright"> Copyright © {{ current_year }} Patience Wasai.</div>
 
 			</div>
 

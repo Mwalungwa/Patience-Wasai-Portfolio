@@ -64,7 +64,7 @@ def index():  # put application's code here
         if not email.strip():
             missing_fields.append("email address")
         if not message.strip():
-            missing_fields.append("email address")
+            missing_fields.append("message")
 
         if missing_fields:
             flash(f"Please fill in the following fields: {', '.join(missing_fields)}")
